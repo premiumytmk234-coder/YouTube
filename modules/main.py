@@ -155,7 +155,7 @@ async def account_login(bot: Client, m: Message):
                         url = re.search(r"(https://.*?playlist.m3u8.*?)\"", text).group(1)
 
             elif 'classplusapp' in url or "testbook.com" in url or "classplusapp.com/drm" in url or "media-cdn.classplusapp.com/drm" in url:
-                url, contentId = url.split('&')
+                url, contentId = url.split('&contentHashIdl=')
                 
                 headers = {
                     'host': 'api.classplusapp.com',
